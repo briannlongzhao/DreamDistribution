@@ -336,7 +336,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            Samples of generated image results using reference images.
+            More results of generated image using reference images.
             Images in the left columns are reference images, and images in the right columns are generated images.
           </p>
         </div>
@@ -345,6 +345,120 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Diverse In-distribution Instance Generation with Text-guided Editing</h2>
+        <img src="./static/images/text_edit.png" alt="Diverse In-distribution Instance Generation with Text-guided Editing"/>
+        <div class="content has-text-justified">
+          <p>
+            Results on text-editability of our methods.
+            Left column shows samples of reference images,
+            right columns are generated results with corresponding prompts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Application on Text-to-3D Generation</h2>
+        <img src="./static/images/3d.png" alt="Application on Text-to-3D Generation"/>
+        <div class="content has-text-justified">
+          <p>
+            3D generation results by learning a prompt distribution over the reference images
+            and then inference using <a href="https://mv-dream.github.io/">MVDream</a> (without extra texts).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Application on Text-to-3D Generation with Text-guided Editing</h2>
+        <img src="./static/images/3d_text_edit.png" alt="Application on Text-to-3D Generation with Text-guided Editing"/>
+        <div class="content has-text-justified">
+          <p>
+            3D generation results by learning a prompt distribution over the reference images
+            and then inference with text-guided editing using <a href="https://mv-dream.github.io/">MVDream</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Composition of Prompt Distributions</h2>
+          <img src="./static/images/composition_1.png" alt="Composition 1"/><br><br>
+          <img src="./static/images/composition_2.png" alt="Composition 2"/><br><br>
+          <img src="./static/images/composition_3.png" alt="Composition 3"/>
+        <div class="content has-text-justified">
+          <p>
+            Composition of prompt distributions using linear interpolation between two sets of images.
+            Mixing ratio changes linearly from left to right.
+            The middle columns show mixtures of two sets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Scaling Variance of Prompt Distribution</h2>
+          <img src="./static/images/scaling_1.png" alt="Scaling 1"/><br><br>
+          <img src="./static/images/scaling_2.png" alt="Scaling 2"/><br><br>
+          <img src="./static/images/scaling_3.png" alt="Scaling 3"/>
+        <div class="content has-text-justified">
+          <p>
+            Effect of scaling the variance of a learned prompt distribution, by multiplying variance with a scalar <span>&#947</span>.
+            Image diversity increases as the scaling factor <span>&#947</span> increases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-desktop">
+        <h2 class="title is-3">Synthetic ImageNet</h2>
+        <img src="./static/images/imagenet.png" alt="Synthetic Imagenet"/>
+        <div class="content has-text-justified">
+          <p>
+            Comparison between training images generated using our method and image generated using solely class names as text prompts.
+            For each group of two rows, the top row shows samples of our generated training images,
+            and the bottom row shows the training images generated using class names as text prompts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Paper video. -->
 <!--    <div class="columns is-centered has-text-centered">-->
