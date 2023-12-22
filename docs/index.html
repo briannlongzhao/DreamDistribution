@@ -78,7 +78,7 @@
 
 
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" id="title-hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -184,12 +184,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video class="video lazy" autoplay loop playsinline muted>
+      <video class="video lazy" autoplay loop playsinline muted height="100%">
         <source data-src="static/images/teaser_1_crop.mp4" type="video/mp4" src="static/images/teaser_1_crop.mp4">
     </video>
       <!-- <img src="./static/images/teaser_1.gif" style="width:100%" loop="infinite" alt="Teaser Image"/> -->
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">DreamDistribution</span> finds a distribution of reference images and generates new instances,
+        <span class="dnerf">DreamDistribution</span> finds a prompt distribution of reference images, then it can be used to generates new 2D/3D instances, 
         capable of text-guided editing and more.
       </h2>
     </div>
@@ -254,6 +254,75 @@
 <!--  </div>-->
 <!--</section>-->
 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <h2 class="subtitle has-text-centered">Here are some more generated examples. We hope they are cool enough to convince you it's worth reading on :)</h2> -->
+      <div id="results-carousel-face" class="carousel results-carousel">
+        <div class="item item-2d-diverse">
+          <a href="#2d-diverse">
+          <div class="carousel-content">
+            <h2>Diverse In-distribution 2D Generation</h2>
+            <img src="static/images/2d-diverse-1.png" alt="Diverse 2D Generation"/>
+          </div>
+        </a>
+        </div>
+        <div class="item item-2d-edit">
+          <a href="#2d-edit">
+          <div class="carousel-content">
+            <h2>Text-guided In-distribution 2D Generation</h2>
+            <img src="static/images/2d_edit_1.png" alt="2D Editing"/>
+          </div>
+        </a>
+        </div>
+        <div class="item item-3d-diverse">
+          <a href="#3d-diverse">
+          <div class="carousel-content">
+            <h2>Diverse In-distribution 3D Generation</h2>
+            <video poster="" id="fullbody" autoplay muted loop playsinline>
+            <source src="./static/images/3d-diverse-2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </a>
+      </div>
+      <div class="item item-3d-edit">
+        <a href="3d-edit">
+          <div class="carousel-content">
+            <h2>Text-guided In-distribution 3D Generation</h2>
+            <video poster="" id="fullbody" autoplay muted loop playsinline>
+            <source src="./static/images/3d-edit-1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </a>
+        </div>
+        <div class="item item-composition">
+          <a href="#composition">
+          <div class="carousel-content">
+            <h2>Composition of Prompt Distributions</h2>
+            <img src="static/images/composition_top.png" alt="Prompt Composition"/>
+          </div>
+        </a>
+        </div>
+        <div class="item item-scaling">
+          <a href="#scaling">
+          <div class="carousel-content">
+            <h2>Scaling Variance of Prompt Distribution</h2>
+            <img src="static/images/scaling_top.png" alt="Prompt Scaling"/>
+          </div>
+        </a>
+        </div>
+        <div class="item item-synthetic">
+          <a href="#synthetic">
+          <div class="carousel-content">
+            <h2>Data Synthesis -- Synthetic ImageNet</h2>
+            <img src="static/images/imagenet_top.png" alt="Synthetic ImageNet"/>
+          </div>
+        </a>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -292,6 +361,16 @@
             An additional orthogonal loss is incorporated to promote differentiation among learnable prompts.
             For inference, we similarly sample from the prompt distribution at text feature space to guide the pretrained T2I generation.
           </p>
+          <p style="text-align:center"><strong>Comparison with other methods</strong></p>
+        </div>
+        <img src="./static/images/compare.png" alt="Comparison Result"/>
+        <div class="content has-text-justified">
+          <p>
+            Given a set of training images (typically 5-20, we only show 4 here),
+            we compare generation results with other existing methods.
+            We use Stable Diffusion version 2.1 for all methods.
+            As can be seen on the bottom row, our method is able to generate more diverse and coherent images.
+          </p>
         </div>
       </div>
     </div>
@@ -299,7 +378,7 @@
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
@@ -316,14 +395,14 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
-<section class="section">
+<section class="section" id="2d-diverse">
   <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
-        <h2 class="title is-3">Diverse In-distribution Instance Generation</h2>
+        <h2 class="title is-3">Diverse In-distribution 2D Generation</h2>
         <div class="columns">
           <div class="column">
             <img src="./static/images/eval_set.png" alt="Reference Images"/>
@@ -349,11 +428,11 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="2d-edit">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
-        <h2 class="title is-3">Diverse In-distribution Instance Generation with Text-guided Editing</h2>
+        <h2 class="title is-3">Text-guided In-distribution 2D Generation</h2>
         <img src="./static/images/text_edit.png" alt="Diverse In-distribution Instance Generation with Text-guided Editing"/>
         <div class="content has-text-justified">
           <p>
@@ -368,12 +447,15 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="3d-diverse">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
         <h2 class="title is-3">Application on Text-to-3D Generation</h2>
-        <img src="./static/images/3d.png" alt="Application on Text-to-3D Generation"/>
+        <!-- <img src="./static/images/3d.png" alt="Application on Text-to-3D Generation"/> -->
+        <video class="video lazy" autoplay loop playsinline muted height="100%">
+          <source data-src="static/images/3d_crop.mp4" type="video/mp4" src="static/images/3d_crop.mp4">
+      </video>
         <div class="content has-text-justified">
           <p>
             3D generation results by learning a prompt distribution over the reference images
@@ -386,12 +468,15 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="3d-edit">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
         <h2 class="title is-3">Application on Text-to-3D Generation with Text-guided Editing</h2>
-        <img src="./static/images/3d_text_edit.png" alt="Application on Text-to-3D Generation with Text-guided Editing"/>
+        <!-- <img src="./static/images/3d_text_edit.png" alt="Application on Text-to-3D Generation with Text-guided Editing"/> -->
+        <video class="video lazy" autoplay loop playsinline muted height="100%">
+          <source data-src="static/images/3d_edit_crop.mp4" type="video/mp4" src="static/images/3d_edit_crop.mp4">
+      </video>
         <div class="content has-text-justified">
           <p>
             3D generation results by learning a prompt distribution over the reference images
@@ -404,7 +489,7 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="composition">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
@@ -425,7 +510,7 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="scaling">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
@@ -445,7 +530,7 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="synthetic">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-desktop">
