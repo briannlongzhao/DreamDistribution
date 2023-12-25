@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="briannlz@ilab" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="FAREAST.v-enlongzhao@localhost:11730">
         <serverdata>
@@ -33,7 +33,7 @@
       <paths name="briannlz@ilab">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/lab/briannlz/DreamDistribution" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
@@ -83,6 +83,20 @@
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="briannlz@ilab (16)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/lab/briannlz/DreamDistribution" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="briannlz@ilab (17)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/lab/briannlz/DreamDistribution" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
@@ -143,5 +157,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
