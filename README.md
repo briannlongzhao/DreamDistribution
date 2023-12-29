@@ -1,6 +1,6 @@
 # DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models
 
-This repo contains the code implementation of DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models](https://arxiv.org/abs/2312.14216).
+This repo contains the code implementation of [DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models](https://arxiv.org/abs/2312.14216).
 
 [project page](https://briannlongzhao.github.io/DreamDistribution)
 
