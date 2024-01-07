@@ -20,7 +20,7 @@ BATCH_SIZE=4
 REPORT_TO="wandb"
 
 
-accelerate launch train_prompt.py \
+accelerate launch train.py \
   --train_data_dir=$TRAIN_DATA_DIR \
   --pretrained_model_name_or_path=$PRETRAINED_MODEL_NAME_OR_PATH \
   --output_dir=$OUTPUT_DIR \

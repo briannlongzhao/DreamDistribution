@@ -1,9 +1,14 @@
-# DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models
+# DreamDistribution
 
-This repo contains the code implementation of [DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models](https://arxiv.org/abs/2312.14216).
+This repo contains the code implementation of the paper:
 
-[project page](https://briannlongzhao.github.io/DreamDistribution)
+*DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models*
 
+[[project page](https://briannlongzhao.github.io/DreamDistribution)] [[arXiv](https://arxiv.org/abs/2312.14216)]
+
+![](docs/static/images/teaser_1_crop.gif)
+
+> Based on a reference image set, DreamDistribution finds a prompt distribution, which can then be used to generate new 2D/3D instances, capable of text-guided editing and more.
 
 ## Usage
 
@@ -70,3 +75,7 @@ python generate.py \
   --std_scale 1.0 1.0 \
   --distribution_weight 0.5 0.5
 ```
+
+## Acknowledgement
+
+We borrow code from [Hugging Face diffusers](https://arxiv.org/abs/2312.14216) and [Learning to Prompt for Vision-Language Models](https://arxiv.org/abs/2109.01134) ([CoOp](https://github.com/KaiyangZhou/CoOp)). We thank the authors and the open source contributors for their work and contribution.
